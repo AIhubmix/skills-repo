@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-02-07T17:29:32.889Z",
+  "generatedAt": "2026-03-05T20:18:01.187Z",
   "skills": [
     {
       "specVersion": 2,
@@ -2202,10 +2202,10 @@
         "repo": "https://github.com/openai/skills",
         "path": "skills/.curated/openai-docs",
         "ref": "main",
-        "syncedCommit": "f46b2535abfc2ec4b383ba0da47a0357abfa198c"
+        "syncedCommit": "fe06517f6e7b83249220c0c1fe71a2ce74f95ea7"
       },
       "repoPath": "skills/documentation/openai-docs",
-      "summary": "Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. Always prioritize the developer docs MCP tools over web.run for OpenAI-related questions. Only if the MCP server is installed and returns no meaningful results should you fall back to web search.",
+      "summary": "Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. Always prioritize the developer docs MCP tools over web.run for OpenAI-related questions. This skill may also load targeted files from `references/` for model-selection and GPT-5.4-specific requests, but current OpenAI docs remain authoritative. Only if the MCP server is installed and returns no meaningful results should you fall back to web search.",
       "files": [
         {
           "path": "agents/openai.yaml",
@@ -2221,6 +2221,18 @@
         },
         {
           "path": "LICENSE.txt",
+          "kind": "file"
+        },
+        {
+          "path": "references/gpt-5p4-prompting-guide.md",
+          "kind": "file"
+        },
+        {
+          "path": "references/latest-model.md",
+          "kind": "file"
+        },
+        {
+          "path": "references/upgrading-to-gpt-5p4.md",
           "kind": "file"
         },
         {
