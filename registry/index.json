@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-03-05T20:18:01.187Z",
+  "generatedAt": "2026-03-10T20:14:34.496Z",
   "skills": [
     {
       "specVersion": 2,
@@ -265,17 +265,37 @@
         "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
         "path": ".claude/skills/ui-ux-pro-max",
         "ref": "main",
-        "syncedCommit": "3eb7d99d67b6e7a33807463dbbb0d01940a96e1f"
+        "syncedCommit": "07f4ef3ac2568c25a3b0c8ef5165a86abc3e56e4"
       },
       "repoPath": "skills/development/ui-ux-pro-max",
-      "summary": "Comprehensive design guide for web and mobile applications. Contains 50+ styles, 97 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types across 9 technology stacks. Searchable database with priority-based recommendations.",
+      "summary": "Comprehensive design guide for web and mobile applications. Contains 50+ styles, 161 color palettes, 57 font pairings, 161 product types with reasoning rules, 99 UX guidelines, and 25 chart types across 10 technology stacks. Searchable database with priority-based recommendations.",
       "files": [
+        {
+          "path": "data/_sync_all.py",
+          "kind": "file"
+        },
+        {
+          "path": "data/app-interface.csv",
+          "kind": "file"
+        },
         {
           "path": "data/charts.csv",
           "kind": "file"
         },
         {
           "path": "data/colors.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/design.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/draft.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/google-fonts.csv",
           "kind": "file"
         },
         {
@@ -295,55 +315,7 @@
           "kind": "file"
         },
         {
-          "path": "data/stacks/astro.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/flutter.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/html-tailwind.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/jetpack-compose.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/nextjs.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/nuxt-ui.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/nuxtjs.csv",
-          "kind": "file"
-        },
-        {
           "path": "data/stacks/react-native.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/react.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/shadcn.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/svelte.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/swiftui.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/stacks/vue.csv",
           "kind": "file"
         },
         {
@@ -360,10 +332,6 @@
         },
         {
           "path": "data/ux-guidelines.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/web-interface.csv",
           "kind": "file"
         },
         {
