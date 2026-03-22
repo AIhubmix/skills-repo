@@ -28,17 +28,20 @@ jobs:
       - name: Install root deps
         run: npm ci
 
-      - name: Run importer (copies files into skills/)
+      - name: Run importer (creates metadata in skills/)
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: node scripts/import-from-issue.mjs
+
+      - name: Fetch skill files from source repos
+        run: npm run sync:skills
 
       - name: Validate imported skills
         id: validate
         run: npm run validate
 
       - name: Build registry artifacts
-        run: npm run build:registry
+        run: node scripts/build-registry.mjs
 
       - name: Create pull request
         id: cpr
