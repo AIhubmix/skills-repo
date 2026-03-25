@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-03-24T20:20:03.724Z",
+  "generatedAt": "2026-03-25T20:19:29.193Z",
   "skills": [
     {
       "specVersion": 2,
@@ -12,7 +12,7 @@
         "repo": "https://github.com/openai/skills",
         "path": "skills/.curated/figma",
         "ref": "main",
-        "syncedCommit": "0e7823cca07bc2cbf34718a383f9ae92525be6a5"
+        "syncedCommit": "736f600bf6ecbc000c04f1d2710b990899f28903"
       },
       "repoPath": "skills/design/figma",
       "summary": "Use the Figma MCP server for Figma-driven implementation. For setup and debugging details (env vars, config, verification), see `references/figma-mcp-config.md`.",
@@ -106,7 +106,7 @@
         "repo": "https://github.com/openai/skills",
         "path": "skills/.curated/figma-implement-design",
         "ref": "main",
-        "syncedCommit": "0e7823cca07bc2cbf34718a383f9ae92525be6a5"
+        "syncedCommit": "736f600bf6ecbc000c04f1d2710b990899f28903"
       },
       "repoPath": "skills/development/figma-implement-design",
       "summary": "## Overview",
