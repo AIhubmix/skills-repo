@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-04-23T20:28:22.340Z",
+  "generatedAt": "2026-04-24T20:22:50.359Z",
   "skills": [
     {
       "specVersion": 2,
@@ -2227,10 +2227,10 @@
         "repo": "https://github.com/openai/skills",
         "path": "skills/.curated/openai-docs",
         "ref": "main",
-        "syncedCommit": "11c643813b4645ca9f25d49ca180697732e0141a"
+        "syncedCommit": "da7611f0ddb078b641407842473e4fa308988516"
       },
       "repoPath": "skills/documentation/openai-docs",
-      "summary": "Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. Always prioritize the developer docs MCP tools over web.run for OpenAI-related questions. This skill may also load targeted files from `references/` for model-selection, model-upgrade, and prompt-upgrade requests, but current OpenAI docs remain authoritative. Only if the MCP server is installed and returns no meaningful results should you fall back to web search.",
+      "summary": "Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. Always prioritize the developer docs MCP tools over web.run for OpenAI-related questions. This skill also owns model selection, API model migration, and prompt-upgrade guidance. Only if the MCP server is installed and returns no meaningful results should you fall back to web search.",
       "files": [
         {
           "path": "agents/openai.yaml",
