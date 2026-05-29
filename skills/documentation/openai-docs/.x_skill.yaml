@@ -11,4 +11,4 @@ source:
   repo: https://github.com/openai/skills
   path: skills/.curated/openai-docs
   ref: main
-  syncedCommit: 724cd511c96593f642bddf13187217aa155d2554
+  syncedCommit: a8924c2a35cfa290458852c4fad17c9133054c2e

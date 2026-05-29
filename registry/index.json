@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-05-28T20:54:48.749Z",
+  "generatedAt": "2026-05-29T20:56:19.253Z",
   "skills": [
     {
       "specVersion": 2,
@@ -2227,10 +2227,10 @@
         "repo": "https://github.com/openai/skills",
         "path": "skills/.curated/openai-docs",
         "ref": "main",
-        "syncedCommit": "724cd511c96593f642bddf13187217aa155d2554"
+        "syncedCommit": "a8924c2a35cfa290458852c4fad17c9133054c2e"
       },
       "repoPath": "skills/documentation/openai-docs",
-      "summary": "Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. Always prioritize the developer docs MCP tools over web.run for OpenAI-related questions. This skill also owns model selection, API model migration, and prompt-upgrade guidance. Only if the MCP server is installed and returns no meaningful results should you fall back to web search.",
+      "summary": "Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. \"Docs MCP\" means `mcp__openaiDeveloperDocs__search_openai_docs` and `mcp__openaiDeveloperDocs__fetch_openai_doc`; for API reference, schema, parameter, or required-field questions, also use `mcp__openaiDeveloperDocs__get_openapi_spec` when available. Official-domain web search is fallback after those tools are unavailable or unhelpful. Broad Codex questions use the manual helper before Docs MCP. This skill also owns model selection, API model migration, and prompt-upgrade guidance.",
       "files": [
         {
           "path": "agents/openai.yaml",
@@ -2258,6 +2258,10 @@
         },
         {
           "path": "references/upgrade-guide.md",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/fetch-codex-manual.mjs",
           "kind": "file"
         },
         {

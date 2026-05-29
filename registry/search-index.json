@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-05-28T20:54:48.749Z",
+  "generatedAt": "2026-05-29T20:56:19.253Z",
   "docs": [
     {
       "id": "figma",
@@ -128,7 +128,7 @@
       "title": "OpenAI Docs",
       "tags": [],
       "agents": [],
-      "text": "OpenAI Docs\nUse when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.\nProvide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. Always prioritize the developer docs MCP tools over web.run for OpenAI-related questions. This skill also owns model selection, API model migration, and prompt-upgrade guidance. Only if the MCP server is installed and returns no meaningful results should you fall back to web search."
+      "text": "OpenAI Docs\nUse when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.\nProvide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. \"Docs MCP\" means `mcp__openaiDeveloperDocs__search_openai_docs` and `mcp__openaiDeveloperDocs__fetch_openai_doc`; for API reference, schema, parameter, or required-field questions, also use `mcp__openaiDeveloperDocs__get_openapi_spec` when available. Official-domain web search is fallback after those tools are unavailable or unhelpful. Broad Codex questions use the manual helper before Docs MCP. This skill also owns model selection, API model migration, and prompt-upgrade guidance."
     },
     {
       "id": "doc",
