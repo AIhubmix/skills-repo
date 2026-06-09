@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-06-08T21:00:09.920Z",
+  "generatedAt": "2026-06-09T20:48:27.541Z",
   "skills": [
     {
       "specVersion": 2,
@@ -147,10 +147,10 @@
         "repo": "https://github.com/anthropics/skills",
         "path": "skills/frontend-design",
         "ref": "main",
-        "syncedCommit": "69c0b1a0674149f27b61b2635f935524b6add202"
+        "syncedCommit": "57546260929473d4e0d1c1bb75297be2fdfa1949"
       },
       "repoPath": "skills/development/frontend-design",
-      "summary": "This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic \"AI slop\" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.",
+      "summary": "Approach this as the design lead at a small studio known for giving every client a visual identity that could not be mistaken for anyone else's. This client has already rejected proposals that felt templated, and is paying for a distinctive point of view: make deliberate, opinionated choices about palette, typography, and layout that are specific to this brief, and take one real aesthetic risk you can justify.",
       "files": [
         {
           "path": "LICENSE.txt",

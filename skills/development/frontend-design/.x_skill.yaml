@@ -12,4 +12,4 @@ source:
   repo: https://github.com/anthropics/skills
   path: skills/frontend-design
   ref: main
-  syncedCommit: 69c0b1a0674149f27b61b2635f935524b6add202
+  syncedCommit: 57546260929473d4e0d1c1bb75297be2fdfa1949

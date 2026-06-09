@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-06-08T21:00:09.920Z",
+  "generatedAt": "2026-06-09T20:48:27.541Z",
   "docs": [
     {
       "id": "figma",
@@ -32,7 +32,7 @@
       "title": "frontend-design",
       "tags": [],
       "agents": [],
-      "text": "frontend-design\nCreate distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.\nThis skill guides creation of distinctive, production-grade frontend interfaces that avoid generic \"AI slop\" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices."
+      "text": "frontend-design\nCreate distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.\nApproach this as the design lead at a small studio known for giving every client a visual identity that could not be mistaken for anyone else's. This client has already rejected proposals that felt templated, and is paying for a distinctive point of view: make deliberate, opinionated choices about palette, typography, and layout that are specific to this brief, and take one real aesthetic risk you can justify."
     },
     {
       "id": "notion-spec-to-implementation",
