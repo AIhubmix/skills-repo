@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-06-20T20:36:13.987Z",
+  "generatedAt": "2026-06-21T20:40:16.101Z",
   "skills": [
     {
       "specVersion": 2,
@@ -322,7 +322,7 @@
         "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
         "path": ".claude/skills/ui-ux-pro-max",
         "ref": "main",
-        "syncedCommit": "07f4ef3ac2568c25a3b0c8ef5165a86abc3e56e4"
+        "syncedCommit": "a3dea0d72fd44396a116459d88872f15418e4d91"
       },
       "repoPath": "skills/development/ui-ux-pro-max",
       "summary": "Comprehensive design guide for web and mobile applications. Contains 50+ styles, 161 color palettes, 57 font pairings, 161 product types with reasoning rules, 99 UX guidelines, and 25 chart types across 10 technology stacks. Searchable database with priority-based recommendations.",
@@ -372,7 +372,67 @@
           "kind": "file"
         },
         {
+          "path": "data/stacks/angular.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/astro.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/flutter.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/html-tailwind.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/jetpack-compose.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/laravel.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/nextjs.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/nuxt-ui.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/nuxtjs.csv",
+          "kind": "file"
+        },
+        {
           "path": "data/stacks/react-native.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/react.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/shadcn.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/svelte.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/swiftui.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/threejs.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/vue.csv",
           "kind": "file"
         },
         {
