@@ -17,8 +17,8 @@
     },
     "id": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-      "description": "Unique skill identifier (kebab-case)"
+      "$ref": "#/$defs/slug",
+      "description": "Unique skill identifier"
     },
     "title": {
       "type": "string",
@@ -33,7 +33,7 @@
     },
     "category": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "$ref": "#/$defs/slug",
       "description": "Primary category ID (single level)"
     },
     "license": {
@@ -59,12 +59,12 @@
     "tags": {
       "type": "array",
       "description": "Skill tags for search and filtering",
-      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+      "items": { "$ref": "#/$defs/slug" }
     },
     "agents": {
       "type": "array",
       "description": "Compatible AI agents",
-      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+      "items": { "$ref": "#/$defs/slug" }
     },
     "runtime": {
       "type": "array",
@@ -116,7 +116,14 @@
     "related": {
       "type": "array",
       "description": "Related skill IDs",
-      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+      "items": { "$ref": "#/$defs/slug" }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "description": "Identifier rule: starts with ASCII letter, then ASCII letters/digits/'_'/'-'. Allows kebab-case, camelCase, PascalCase, snake_case.",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]*$"
     }
   }
 }

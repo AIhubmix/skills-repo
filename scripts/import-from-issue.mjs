@@ -10,8 +10,7 @@ import path from "node:path";
 import fg from "fast-glob";
 import YAML from "yaml";
 import { MAX_ITEMS_PER_IMPORT } from './lib/constants.mjs';
-
-const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+import { assertSlug } from '../cli/lib/validation.mjs';
 
 // Parse SKILL.md frontmatter (YAML between --- markers)
 function parseSkillMdFrontmatter(content) {
@@ -93,12 +92,6 @@ function extractImportBlock(issueBody) {
   let inner = issueBody.slice(start + marker.length, end).trim();
   if (!inner) throw new Error("Empty import block");
   return inner;
-}
-
-function assertSlug(label, value) {
-  if (typeof value !== "string" || !SLUG_RE.test(value)) {
-    throw new Error(`${label} must match ${SLUG_RE}: ${String(value)}`);
-  }
 }
 
 function normalizeSourcePath(p) {

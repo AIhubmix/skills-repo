@@ -9,8 +9,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-      "description": "Category identifier (kebab-case)"
+      "$ref": "#/$defs/slug",
+      "description": "Category identifier"
     },
     "title": {
       "$ref": "#/$defs/i18nString",
@@ -31,6 +31,11 @@
     }
   },
   "$defs": {
+    "slug": {
+      "type": "string",
+      "description": "Identifier rule: starts with ASCII letter, then ASCII letters/digits/'_'/'-'. Allows kebab-case, camelCase, PascalCase, snake_case.",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]*$"
+    },
     "i18nString": {
       "oneOf": [
         {
