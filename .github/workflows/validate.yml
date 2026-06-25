@@ -22,13 +22,11 @@ jobs:
       - name: Install root deps
         run: npm ci
 
-      - name: Restore skills cache
-        uses: actions/cache@v3
-        with:
-          path: .cache/skills
-          key: skills-cache-${{ github.sha }}
-          restore-keys: |
-            skills-cache-
+      # Intentionally NOT restoring .cache/skills here. The cache is written by
+      # sync.yml on its schedule and tied to upstream HEAD at that moment;
+      # restoring it in a PR validate can serve a stale SKILL.md that doesn't
+      # match the registry/*.json this PR carries, making check:registry
+      # spuriously fail. Re-cloning each run is slower but always honest.
 
       - name: Validate skills
         run: npm run validate
