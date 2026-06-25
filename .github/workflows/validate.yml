@@ -33,6 +33,12 @@ jobs:
       - name: Validate skills
         run: npm run validate
 
+      # New skills in a PR are not yet in the cache; without this step
+      # check:registry and the rest of the chain can't see their SKILL.md.
+      # Mirrors the equivalent step in import.yml.
+      - name: Fetch skill files from source repos
+        run: npm run sync:skills
+
       - name: Check registry files are up to date
         run: npm run check:registry
 
