@@ -15,4 +15,4 @@ source:
   repo: https://github.com/AIhubmix/skills
   path: skills/openclaw-install-assistant
   ref: main
-  syncedCommit: 7360db04a20837b1b216dce21a04ede81ebd517c
+  syncedCommit: 53938717da78fb7d59acd3309791aca792326c13

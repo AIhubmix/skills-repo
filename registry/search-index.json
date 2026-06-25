@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-06-24T20:42:02.593Z",
+  "generatedAt": "2026-06-25T08:14:55.177Z",
   "docs": [
     {
       "id": "figma",
@@ -11,12 +11,12 @@
       "text": "Figma MCP\nUse the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma nodes into production code. Trigger when a task involves Figma URLs, node IDs, design-to-code implementation, or Figma MCP setup and troubleshooting.\nUse the Figma MCP server for Figma-driven implementation. For setup and debugging details (env vars, config, verification), see `references/figma-mcp-config.md`."
     },
     {
-      "id": "develop-web-game",
+      "id": "aihubmixApi",
       "category": "development",
-      "title": "Develop Web Game",
+      "title": "AIHubMix API",
       "tags": [],
       "agents": [],
-      "text": "Develop Web Game\nUse when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.\nBuild games in small steps and validate every change. Treat each iteration as: implement → act → pause → observe → adjust."
+      "text": "AIHubMix API\nIntegrate, query, and use AIHubMix API/model access from live sources. Use for Chinese or English requests about adding AIHubMix to an app or project, generating runnable SDK/API code, selecting model IDs, listing latest models, model-family introductions, pricing, context/max output, capabilities, providers or aliases such as GPT/OpenAI, Gemini/Google/谷歌, Claude/Anthropic/Opus/Sonnet, Qwen/通义/千问, Kimi/Moonshot/月之暗面, DeepSeek/深度求索, Doubao/豆包, GLM/智谱 when the context is AIHubMix; OpenAI-compatible/Anthropic/Gemini gateway calls; Windows PowerShell, macOS/Linux curl, JavaScript and Python examples; aihubmix-openapi contract details; API keys/auth headers; and API error troubleshooting such as 400/401/403/404/429/5XX, garbled output, empty content, or X-Request-Id. Do not use for unrelated general model news or non-AIHubMix API questions unless the user asks to compare with, route through, or call the model via AIHubMix.\nUse this skill to help developers integrate AIHubMix without reading the\nwebsite first. Prefer a runnable path: inspect the user's project when files\nare available, choose the right SDK or gateway protocol, add or generate\nminimal code, include environment setup, and show how to verify the call."
     },
     {
       "id": "figma-implement-design",
@@ -131,14 +131,6 @@
       "text": "OpenAI Docs\nUse when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations (for example: Codex, Responses API, Chat Completions, Apps SDK, Agents SDK, Realtime, model capabilities or limits); prioritize OpenAI docs MCP tools and restrict any fallback browsing to official OpenAI domains.\nProvide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. \"Docs MCP\" means `mcp__openaiDeveloperDocs__search_openai_docs` and `mcp__openaiDeveloperDocs__fetch_openai_doc`; for API reference, schema, parameter, or required-field questions, also use `mcp__openaiDeveloperDocs__get_openapi_spec` when available. Official-domain web search is fallback after those tools are unavailable or unhelpful. Broad Codex questions use the manual helper before Docs MCP. This skill also owns model selection, API model migration, and prompt-upgrade guidance."
     },
     {
-      "id": "doc",
-      "category": "tools",
-      "title": "DOCX Skill",
-      "tags": [],
-      "agents": [],
-      "text": "DOCX Skill\nUse when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.\n## When to use\n- Read or review DOCX content where layout matters (tables, diagrams, pagination).\n- Create or edit DOCX files with professional formatting.\n- Validate visual layout before delivery."
-    },
-    {
       "id": "gh-address-comments",
       "category": "tools",
       "title": "PR Comment Handler",
@@ -153,14 +145,6 @@
       "tags": [],
       "agents": [],
       "text": "Gh Pr Checks Plan Fix\nUse when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.\n## Overview"
-    },
-    {
-      "id": "imagegen",
-      "category": "tools",
-      "title": "Image Generation Skill",
-      "tags": [],
-      "agents": [],
-      "text": "Image Generation Skill\nUse when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or replacement, transparent background, product shots, concept art, covers, or batch variants); run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live calls.\nGenerates or edits images for the current project (for example website assets, game assets, UI mockups, product mockups, wireframes, logo design, photorealistic images, or infographics)."
     },
     {
       "id": "pdf",
