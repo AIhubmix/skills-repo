@@ -103,12 +103,14 @@ async function copyDirFiltered(srcDir, destDir, ignore = [], repoRoot = null) {
   }
 }
 
+// Result shape: 'synced' (ok / cached) | 'gone' (upstream path no longer exists, safe to auto-remove)
+//              | 'failed' (network/clone/copy error — keep metadata, surface as error)
 async function syncSkill(skillId, source, cacheDir) {
   const { repo, path: sourcePath, ref } = source;
 
   if (!repo || !ref) {
     console.log(`  ⚠️  Skipping ${skillId}: missing source.repo or source.ref`);
-    return false;
+    return { status: "failed", reason: "missing source.repo or source.ref" };
   }
 
   const skillCacheDir = path.join(cacheDir, skillId);
@@ -120,7 +122,7 @@ async function syncSkill(skillId, source, cacheDir) {
       const cacheMeta = JSON.parse(await fs.readFile(cacheMetaPath, "utf8"));
       if (cacheMeta.repo === repo && cacheMeta.ref === ref && cacheMeta.path === sourcePath) {
         console.log(`  ✓ ${skillId} (cached)`);
-        return true;
+        return { status: "synced" };
       }
     } catch {
       // Invalid cache, will re-fetch
@@ -149,7 +151,10 @@ async function syncSkill(skillId, source, cacheDir) {
       : repoDir;
 
     if (!(await pathExists(srcSkillDir))) {
-      throw new Error(`Source path not found: ${sourcePath}`);
+      // Repo + ref were reachable but the specific sub-path is gone.
+      // Treat as upstream removal/rename — caller will auto-remove our metadata.
+      console.warn(`    🗑️  upstream gone: path "${sourcePath}" missing at ${repo}@${ref}`);
+      return { status: "gone", reason: `Source path not found: ${sourcePath}` };
     }
 
     // Clean existing cache
@@ -169,10 +174,10 @@ async function syncSkill(skillId, source, cacheDir) {
     }, null, 2));
 
     console.log(`    ✓ synced`);
-    return true;
+    return { status: "synced" };
   } catch (err) {
     console.error(`    ✗ failed: ${err.message}`);
-    return false;
+    return { status: "failed", reason: err.message };
   } finally {
     // Clean up temp directory
     try {
@@ -181,6 +186,17 @@ async function syncSkill(skillId, source, cacheDir) {
       // Ignore cleanup errors
     }
   }
+}
+
+/**
+ * Remove on-disk metadata + skill dir for an upstream-gone skill.
+ * Keeps the category dir (it carries _category.yaml + sibling skills).
+ */
+async function removeGoneSkill({ yamlPath, id, cacheDir }) {
+  const skillDir = path.dirname(yamlPath);
+  await fs.rm(skillDir, { recursive: true, force: true });
+  // Best-effort: also clean cache so a stale entry can't reappear
+  await fs.rm(path.join(cacheDir, id), { recursive: true, force: true });
 }
 
 async function main() {
@@ -208,6 +224,7 @@ async function main() {
   let synced = 0;
   let failed = 0;
   let skipped = 0;
+  const gone = []; // { yamlPath, id, reason }
 
   for (const yamlPath of skillYamlPaths) {
     try {
@@ -219,9 +236,11 @@ async function main() {
         continue;
       }
 
-      const success = await syncSkill(meta.id, meta.source, CACHE_DIR);
-      if (success) {
+      const result = await syncSkill(meta.id, meta.source, CACHE_DIR);
+      if (result.status === "synced") {
         synced++;
+      } else if (result.status === "gone") {
+        gone.push({ yamlPath, id: meta.id, reason: result.reason });
       } else {
         failed++;
       }
@@ -231,8 +250,26 @@ async function main() {
     }
   }
 
+  // Auto-remove skills whose upstream path no longer exists.
+  // Only triggers when clone+ref succeeded but the sub-path is missing —
+  // network/clone errors hit the 'failed' branch and never reach here.
+  if (gone.length > 0) {
+    console.log(`\n🗑️  Auto-removing ${gone.length} skill(s) whose upstream paths no longer exist:`);
+    for (const g of gone) {
+      console.log(`   - ${g.id}  (${path.dirname(g.yamlPath)})`);
+      console.log(`       reason: ${g.reason}`);
+      try {
+        await removeGoneSkill({ yamlPath: g.yamlPath, id: g.id, cacheDir: CACHE_DIR });
+      } catch (err) {
+        console.error(`       ✗ remove failed: ${err.message}`);
+        failed++;
+      }
+    }
+  }
+
   console.log(`\n✅ Sync complete!`);
   console.log(`   Synced: ${synced}`);
+  console.log(`   Auto-removed: ${gone.length}`);
   console.log(`   Failed: ${failed}`);
   console.log(`   Skipped: ${skipped}`);
   console.log(`   Cache: ${CACHE_DIR}/\n`);
