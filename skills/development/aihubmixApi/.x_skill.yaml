@@ -1,0 +1,22 @@
+specVersion: 2
+id: aihubmixApi
+title: AIHubMix API
+description: Integrate, query, and use AIHubMix API/model access from live
+  sources. Use for Chinese or English requests about adding AIHubMix to an app
+  or project, generating runnable SDK/API code, selecting model IDs, listing
+  latest models, model-family introductions, pricing, context/max output,
+  capabilities, providers or aliases such as GPT/OpenAI, Gemini/Google/谷歌,
+  Claude/Anthropic/Opus/Sonnet, Qwen/通义/千问, Kimi/Moonshot/月之暗面, DeepSeek/深度求索,
+  Doubao/豆包, GLM/智谱 when the context is AIHubMix;
+  OpenAI-compatible/Anthropic/Gemini gateway calls; Windows PowerShell,
+  macOS/Linux curl, JavaScript and Python examples; aihubmix-openapi contract
+  details; API keys/auth headers; and API error troubleshooting such as
+  400/401/403/404/429/5XX, garbled output, empty content, or X-Request-Id. Do
+  not use for unrelated general model news or non-AIHubMix API questions unless
+  the user asks to compare with, route through, or call the model via AIHubMix.
+category: development
+source:
+  repo: https://github.com/AIhubmix/skills
+  path: skills/aihubmixApi
+  ref: main
+  syncedCommit: 53938717da78fb7d59acd3309791aca792326c13
