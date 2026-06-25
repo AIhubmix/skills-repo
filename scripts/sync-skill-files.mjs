@@ -105,6 +105,12 @@ async function copyDirFiltered(srcDir, destDir, ignore = [], repoRoot = null) {
 
 // Result shape: 'synced' (ok / cached) | 'gone' (upstream path no longer exists, safe to auto-remove)
 //              | 'failed' (network/clone/copy error — keep metadata, surface as error)
+//
+// Note: yaml.source.syncedCommit cannot be trusted as ground truth here — some
+// historical metadata in this repo has `path` and `syncedCommit` pointing at
+// different upstream states (e.g. ui-ux-pro-max). For correctness with the
+// existing data, this script tracks ref HEAD and lets validate.yml skip the
+// cache layer entirely so check:registry never sees a stale SKILL.md.
 async function syncSkill(skillId, source, cacheDir) {
   const { repo, path: sourcePath, ref } = source;
 
@@ -115,7 +121,7 @@ async function syncSkill(skillId, source, cacheDir) {
 
   const skillCacheDir = path.join(cacheDir, skillId);
 
-  // Check if already cached with same ref
+  // Check if already cached with same (repo, ref, path).
   const cacheMetaPath = path.join(skillCacheDir, ".cache-meta.json");
   if (await pathExists(cacheMetaPath)) {
     try {
@@ -165,11 +171,19 @@ async function syncSkill(skillId, source, cacheDir) {
     // Copy files to cache (pass repoDir as root for symlink resolution)
     await copyDirFiltered(srcSkillDir, skillCacheDir, SKILL_FILE_IGNORE, repoDir);
 
+    // Capture the commit we actually have on disk for diagnostics.
+    let resolvedCommit = null;
+    try {
+      const out = run("git", ["-C", repoDir, "rev-parse", "HEAD"], { stdio: "pipe" });
+      resolvedCommit = (out || "").trim() || null;
+    } catch { /* best effort */ }
+
     // Write cache metadata
     await fs.writeFile(cacheMetaPath, JSON.stringify({
       repo,
       ref,
       path: sourcePath,
+      syncedCommit: resolvedCommit,
       syncedAt: new Date().toISOString()
     }, null, 2));
 
