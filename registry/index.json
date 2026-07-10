@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-07-02T20:34:28.763Z",
+  "generatedAt": "2026-07-10T20:36:01.937Z",
   "skills": [
     {
       "specVersion": 2,
@@ -338,15 +338,11 @@
         "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
         "path": ".claude/skills/ui-ux-pro-max",
         "ref": "main",
-        "syncedCommit": "9ceab49a1c6e9bf23fa9ebc49ca7d4f0c6303a99"
+        "syncedCommit": "3da52ff1cab1be91848072ec1be5f493d730fd5f"
       },
       "repoPath": "skills/development/ui-ux-pro-max",
       "summary": "Comprehensive design guide for web and mobile applications. Contains 50+ styles, 161 color palettes, 57 font pairings, 161 product types with reasoning rules, 99 UX guidelines, and 25 chart types across 10 technology stacks. Searchable database with priority-based recommendations.",
       "files": [
-        {
-          "path": "data/_sync_all.py",
-          "kind": "file"
-        },
         {
           "path": "data/app-interface.csv",
           "kind": "file"
@@ -357,14 +353,6 @@
         },
         {
           "path": "data/colors.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/design.csv",
-          "kind": "file"
-        },
-        {
-          "path": "data/draft.csv",
           "kind": "file"
         },
         {
