@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-07-10T20:36:01.937Z",
+  "generatedAt": "2026-07-14T20:30:55.343Z",
   "skills": [
     {
       "specVersion": 2,
@@ -338,10 +338,10 @@
         "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
         "path": ".claude/skills/ui-ux-pro-max",
         "ref": "main",
-        "syncedCommit": "3da52ff1cab1be91848072ec1be5f493d730fd5f"
+        "syncedCommit": "f8ac5e1266dba8354ea96e19994d9f4345e7ec31"
       },
       "repoPath": "skills/development/ui-ux-pro-max",
-      "summary": "Comprehensive design guide for web and mobile applications. Contains 50+ styles, 161 color palettes, 57 font pairings, 161 product types with reasoning rules, 99 UX guidelines, and 25 chart types across 10 technology stacks. Searchable database with priority-based recommendations.",
+      "summary": "Searchable database of UI/UX design rules with priority-based recommendations: 84 styles, 192 color palettes, 74 font pairings, 192 product types with reasoning rules, 98 UX guidelines, 104 icon entries, 16 GSAP motion presets, and 25 chart types across 22 technology stacks.",
       "files": [
         {
           "path": "data/app-interface.csv",
@@ -388,11 +388,19 @@
           "kind": "file"
         },
         {
+          "path": "data/stacks/avalonia.csv",
+          "kind": "file"
+        },
+        {
           "path": "data/stacks/flutter.csv",
           "kind": "file"
         },
         {
           "path": "data/stacks/html-tailwind.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/javafx.csv",
           "kind": "file"
         },
         {
@@ -440,7 +448,23 @@
           "kind": "file"
         },
         {
+          "path": "data/stacks/uno.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/uwp.csv",
+          "kind": "file"
+        },
+        {
           "path": "data/stacks/vue.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/winui.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/stacks/wpf.csv",
           "kind": "file"
         },
         {
@@ -460,6 +484,14 @@
           "kind": "file"
         },
         {
+          "path": "references/pro-rules.md",
+          "kind": "file"
+        },
+        {
+          "path": "references/quick-reference.md",
+          "kind": "file"
+        },
+        {
           "path": "scripts/core.py",
           "kind": "file"
         },
@@ -469,6 +501,14 @@
         },
         {
           "path": "scripts/search.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_core.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/validate_data.py",
           "kind": "file"
         },
         {
