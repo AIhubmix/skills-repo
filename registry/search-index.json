@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-07-14T20:30:55.343Z",
+  "generatedAt": "2026-07-17T20:24:28.337Z",
   "docs": [
     {
       "id": "figma",
@@ -168,7 +168,7 @@
       "title": "PPTX creation, editing, and analysis",
       "tags": [],
       "agents": [],
-      "text": "PPTX creation, editing, and analysis\nPresentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks\n## Quick Reference"
+      "text": "PPTX creation, editing, and analysis\nPresentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks\nA `.pptx` is a ZIP archive of XML files. Choose your approach by task:"
     }
   ]
 }

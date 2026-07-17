@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-07-14T20:30:55.343Z",
+  "generatedAt": "2026-07-17T20:24:28.337Z",
   "skills": [
     {
       "specVersion": 2,
@@ -2560,21 +2560,13 @@
         "repo": "https://github.com/anthropics/skills",
         "path": "skills/pptx",
         "ref": "main",
-        "syncedCommit": "1ed29a03dc852d30fa6ef2ca53a67dc2c2c2c563"
+        "syncedCommit": "fa0fa64bdc967915dc8399e803be67759e1e62b8"
       },
       "repoPath": "skills/tools/pptx",
-      "summary": "## Quick Reference",
+      "summary": "A `.pptx` is a ZIP archive of XML files. Choose your approach by task:",
       "files": [
         {
-          "path": "editing.md",
-          "kind": "file"
-        },
-        {
           "path": "LICENSE.txt",
-          "kind": "file"
-        },
-        {
-          "path": "pptxgenjs.md",
           "kind": "file"
         },
         {
@@ -2594,15 +2586,15 @@
           "kind": "file"
         },
         {
-          "path": "scripts/office/helpers/merge_runs.py",
+          "path": "scripts/office/helpers/pptx_chart.py",
           "kind": "file"
         },
         {
-          "path": "scripts/office/helpers/simplify_redlines.py",
+          "path": "scripts/office/helpers/pptx_slide.py",
           "kind": "file"
         },
         {
-          "path": "scripts/office/pack.py",
+          "path": "scripts/office/helpers/pptx_theme.py",
           "kind": "file"
         },
         {
@@ -2763,10 +2755,6 @@
         },
         {
           "path": "scripts/office/soffice.py",
-          "kind": "file"
-        },
-        {
-          "path": "scripts/office/unpack.py",
           "kind": "file"
         },
         {
