@@ -84,7 +84,7 @@ git commit: fix: improve sync workflow - better caching and conflict handling
 
 1. **访问 Actions 设置页面**:
    ```
-   https://github.com/inferera/skills-repo/settings/actions
+   https://github.com/AIhubmix/skills-repo/settings/actions
    ```
 
 2. **检查权限配置**:
@@ -96,7 +96,7 @@ git commit: fix: improve sync workflow - better caching and conflict handling
      - ✅ "Allow GitHub Actions to create and approve pull requests"
 
 3. **启用 Workflows**:
-   访问: `https://github.com/inferera/skills-repo/actions`
+   访问: `https://github.com/AIhubmix/skills-repo/actions`
 
    如果看到 "Workflows disabled" 或类似提示:
    - 点击 "I understand my workflows, go ahead and enable them" 或 "Enable workflows"
@@ -125,7 +125,7 @@ actions:
 
 #### 方法 A: 通过 GitHub UI (推荐)
 
-1. 访问: `https://github.com/inferera/skills-repo/actions/workflows/sync.yml`
+1. 访问: `https://github.com/AIhubmix/skills-repo/actions/workflows/sync.yml`
 2. 点击右上角 "Run workflow" 下拉按钮
 3. 选择 branch: `main`
 4. (可选) 设置 `force_fetch: true` 强制更新所有技能
@@ -171,7 +171,7 @@ git pull
 git log --oneline --author="github-actions" -5
 
 # 或访问 GitHub 查看 Actions 执行历史
-https://github.com/inferera/skills-repo/actions/workflows/sync.yml
+https://github.com/AIhubmix/skills-repo/actions/workflows/sync.yml
 ```
 
 ### 步骤 4: 推送本次修复
@@ -224,7 +224,7 @@ git push origin main
 gh run list --workflow=sync.yml --limit 10
 
 # 或访问
-https://github.com/inferera/skills-repo/actions/workflows/sync.yml
+https://github.com/AIhubmix/skills-repo/actions/workflows/sync.yml
 ```
 
 ---
@@ -274,7 +274,7 @@ for (let i = 0; i < skills.length; i += 5) {
 **A**: GitHub Actions 的定时任务在 fork 仓库默认禁用，需要手动启用。
 
 ### Q: 如何确认定时任务已启用？
-**A**: 访问 `https://github.com/inferera/skills-repo/actions`，查看是否有 "Sync Skills" 的执行记录。
+**A**: 访问 `https://github.com/AIhubmix/skills-repo/actions`，查看是否有 "Sync Skills" 的执行记录。
 
 ### Q: 为什么本地有 .sync-result.json 但没有自动提交？
 **A**: .sync-result.json 是本地运行 `npm run sync:check` 生成的，不代表 GitHub Actions 有运行。
@@ -292,7 +292,7 @@ for (let i = 0; i < skills.length; i += 5) {
 如果遇到问题:
 
 1. **查看 Actions 日志**:
-   `https://github.com/inferera/skills-repo/actions`
+   `https://github.com/AIhubmix/skills-repo/actions`
 
 2. **检查本地同步**:
    ```bash
