@@ -50,7 +50,7 @@ Examples:
   # Remove a skill
   npx aiskill remove ui-ux-pro-max --agent claude --scope project
 
-For more information, visit: https://github.com/inferera/skills-repo
+For more information, visit: https://github.com/AIhubmix/skills-repo
 `);
 }
 
