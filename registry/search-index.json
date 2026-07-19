@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-07-17T20:24:28.337Z",
+  "generatedAt": "2026-07-19T12:30:08.389Z",
   "docs": [
     {
       "id": "figma",
@@ -145,6 +145,24 @@
       "tags": [],
       "agents": [],
       "text": "Gh Pr Checks Plan Fix\nUse when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.\n## Overview"
+    },
+    {
+      "id": "hermes-tweet",
+      "category": "tools",
+      "title": "Hermes Tweet",
+      "tags": [
+        "hermes-agent",
+        "xquik",
+        "twitter",
+        "x",
+        "social-media",
+        "automation"
+      ],
+      "agents": [
+        "hermes-agent",
+        "codex"
+      ],
+      "text": "Hermes Tweet\nUse Xquik from Hermes Agent for X search, posting, replies, likes, retweets, follows, DMs, monitors, extraction jobs, draws, media, and trends. Not affiliated with X Corp.\nhermes-agent xquik twitter x social-media automation\n## Overview"
     },
     {
       "id": "pdf",

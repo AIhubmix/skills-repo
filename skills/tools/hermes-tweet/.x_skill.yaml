@@ -1,0 +1,28 @@
+specVersion: 2
+id: hermes-tweet
+title: Hermes Tweet
+description: Use Xquik from Hermes Agent for X search, posting, replies, likes, retweets, follows, DMs, monitors, extraction jobs, draws, media, and trends. Not affiliated with X Corp.
+category: tools
+license: MIT
+authors:
+  - name: Xquik
+    url: https://github.com/Xquik-dev/hermes-tweet
+tags:
+  - hermes-agent
+  - xquik
+  - twitter
+  - x
+  - social-media
+  - automation
+agents:
+  - hermes-agent
+  - codex
+source:
+  repo: https://github.com/Xquik-dev/hermes-tweet
+  path: skills/hermes-tweet
+  ref: master
+  syncedCommit: 52d28943b8c50d4e4df2c21d52a2286c148e1c0e
+links:
+  homepage: https://github.com/Xquik-dev/hermes-tweet
+  docs: https://github.com/Xquik-dev/hermes-tweet#readme
+  repo: https://github.com/Xquik-dev/hermes-tweet
