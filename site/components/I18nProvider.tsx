@@ -69,7 +69,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const t = useCallback(
     (key: MessageKey, params?: Record<string, string | number>) => {
       const msg = MESSAGES[locale]?.[key] ?? MESSAGES[DEFAULT_LOCALE][key] ?? key;
-      return formatMessage(msg, params);
+      return formatMessage(msg, params, locale);
     },
     [locale]
   );
