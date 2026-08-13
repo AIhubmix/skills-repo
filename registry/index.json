@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-07-31T20:33:57.020Z",
+  "generatedAt": "2026-08-13T20:15:47.700Z",
   "skills": [
     {
       "specVersion": 2,
@@ -338,13 +338,17 @@
         "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
         "path": ".claude/skills/ui-ux-pro-max",
         "ref": "main",
-        "syncedCommit": "b0ebb1797ebc6467fcf3a35f96d768d15faf5120"
+        "syncedCommit": "a38d04c3d5c298c851dbe5e6ee1965ee3de42cb5"
       },
       "repoPath": "skills/development/ui-ux-pro-max",
-      "summary": "Searchable database of UI/UX design rules with priority-based recommendations: 84 styles, 192 color palettes, 74 font pairings, 192 product types with reasoning rules, 98 UX guidelines, 104 icon entries, 16 GSAP motion presets, and 25 chart types across 22 technology stacks.",
+      "summary": "Searchable local UI/UX guidance: 79 searchable styles (50 active), 192 product palettes and exact reasoning profiles, 74 font pairings, 119 UX guidelines, 105 curated icons, 17 GSAP presets, 25 chart types, and 22 technology stacks.",
       "files": [
         {
           "path": "data/app-interface.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/catalog-summary.json",
           "kind": "file"
         },
         {
@@ -353,6 +357,14 @@
         },
         {
           "path": "data/colors.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/data-provenance.json",
+          "kind": "file"
+        },
+        {
+          "path": "data/google-font-licenses.json",
           "kind": "file"
         },
         {
@@ -369,6 +381,10 @@
         },
         {
           "path": "data/motion.csv",
+          "kind": "file"
+        },
+        {
+          "path": "data/phosphor-icons-upstream.json",
           "kind": "file"
         },
         {
@@ -500,7 +516,71 @@
           "kind": "file"
         },
         {
+          "path": "scripts/reasoning_contract.py",
+          "kind": "file"
+        },
+        {
           "path": "scripts/search.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/google-api.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/google-catalog.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/google-existing.csv",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/google-metadata.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/google-overrides.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/icons-curated.csv",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/phosphor-core.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/phosphor-package.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/phosphor-react-exports.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/catalogs/phosphor-react-package.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/relevance-baseline.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/relevance-cases.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/fixtures/relevance-thresholds.json",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_catalog_refresh.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_core_data_quality.py",
           "kind": "file"
         },
         {
@@ -508,7 +588,31 @@
           "kind": "file"
         },
         {
+          "path": "scripts/tests/test_data_contracts.py",
+          "kind": "file"
+        },
+        {
           "path": "scripts/tests/test_design_system_mode.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_native_desktop_stack_freshness.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_relevance_evaluator.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_style_taxonomy.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_text_layout_resilience.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_web_stack_freshness.py",
           "kind": "file"
         },
         {
