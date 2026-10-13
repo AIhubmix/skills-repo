@@ -1566,7 +1566,7 @@ const ru: Messages = {
   "home.hero.browseCategories": "Смотреть категории",
   "home.categories.title": "Категории",
   "home.categories.viewAll": "Показать все",
-  "home.categories.skillCount": "{count} навыков",
+  "home.categories.skillCount": "{count} {count, plural, one{навык} few{навыка} many{навыков} other{навыков}}",
   "home.skills.title": "Все навыки",
 
   "search.placeholder": "Поиск по имени, тегу или агенту…",
@@ -1585,12 +1585,12 @@ const ru: Messages = {
   "categories.description": "Просматривайте навыки по категории и подкатегории.",
 
   "categoryPage.allCategories": "Все категории",
-  "categoryPage.skillsCount": "{count} навыков",
+  "categoryPage.skillsCount": "{count} {count, plural, one{навык} few{навыка} many{навыков} other{навыков}}",
 
   "skill.back": "Назад",
   "skill.sourceButton": "Источник",
   "skill.files": "Файлы",
-  "skill.filesCount": "{count} файлов",
+  "skill.filesCount": "{count} {count, plural, one{файл} few{файла} many{файлов} other{файлов}}",
   "skill.filesDescription": "Нажмите на файл, чтобы посмотреть содержимое.",
   "skill.instructions": "Инструкция",
   "skill.quickInstall": "Быстрая установка",
@@ -1622,7 +1622,7 @@ const ru: Messages = {
   "quickInstall.sourceNotConfigured": "# Репозиторий-источник не настроен",
   "quickInstall.notDeclaredSuffix": " (не объявлено)",
 
-  "fileTree.filesCount": "{count} файлов",
+  "fileTree.filesCount": "{count} {count, plural, one{файл} few{файла} many{файлов} other{файлов}}",
   "fileTree.instructions": "Инструкция",
 
   "filePreview.close": "Закрыть",
@@ -1641,7 +1641,7 @@ const ru: Messages = {
   "review.subtitle": "Проверьте навыки перед подтверждением запроса на импорт.",
   "review.sourceRepository": "Исходный репозиторий",
   "review.branchRef": "Ветка / Ref",
-  "review.skillsCount": "{count} навыков",
+  "review.skillsCount": "{count} {count, plural, one{навык} few{навыка} many{навыков} other{навыков}}",
   "review.skillsToImport": "Навыки для импорта",
   "review.updateBadge": "Обновить",
   "review.sourcePath": "Исходный путь",
@@ -1708,9 +1708,37 @@ export function isLocale(value: string): value is Locale {
   return (LOCALE_OPTIONS as readonly { locale: string }[]).some((o) => o.locale === value);
 }
 
-export function formatMessage(message: string, params?: Record<string, string | number>) {
+export function formatMessage(message: string, params?: Record<string, string | number>, locale: string = "en") {
   if (!params) return message;
-  return message.replace(/\{([a-zA-Z0-9_]+)\}/g, (m, key) => {
+
+  let formatted = message;
+
+  // Basic ICU plural support: {count, plural, one{...} few{...} many{...} other{...}}
+  formatted = formatted.replace(/\{([a-zA-Z0-9_]+),\s*plural,\s*((?:[a-zA-Z0-9_=]+\s*\{[^}]*\}\s*)+)\}/g, (match, key, optionsStr) => {
+    const value = params[key];
+    if (value == null) return match;
+    const numValue = Number(value);
+
+    const optionRegex = /([a-zA-Z0-9_=]+)\s*\{([^}]*)\}/g;
+    const options: Record<string, string> = {};
+    let optionMatch;
+    while ((optionMatch = optionRegex.exec(optionsStr)) !== null) {
+      options[optionMatch[1]] = optionMatch[2];
+    }
+
+    const exactMatch = `=${numValue}`;
+    if (exactMatch in options) {
+      return options[exactMatch].replace(/#/g, String(numValue));
+    }
+
+    const pr = new Intl.PluralRules(locale);
+    const rule = pr.select(numValue);
+
+    const result = options[rule] ?? options["other"] ?? "";
+    return result.replace(/#/g, String(numValue));
+  });
+
+  return formatted.replace(/\{([a-zA-Z0-9_]+)\}/g, (m, key) => {
     const v = params[key];
     if (v === undefined || v === null) return m;
     return String(v);
