@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-11-01T20:10:26.637Z",
+  "generatedAt": "2026-11-02T20:11:21.277Z",
   "skills": [
     {
       "specVersion": 2,
@@ -338,7 +338,7 @@
         "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
         "path": ".claude/skills/ui-ux-pro-max",
         "ref": "main",
-        "syncedCommit": "3a13158ff1f32156cbe144108de48eda2ecaed9a"
+        "syncedCommit": "713eef51b04efc98d6fa565323b495f7c9c89fd4"
       },
       "repoPath": "skills/development/ui-ux-pro-max",
       "summary": "Searchable local UI/UX guidance: 79 searchable styles (50 active), 192 product palettes and exact reasoning profiles, 74 font pairings, 119 UX guidelines, 105 curated icons, 17 GSAP presets, 25 chart types, and 22 technology stacks.",
@@ -609,6 +609,10 @@
         },
         {
           "path": "scripts/tests/test_relevance_evaluator.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_rtl_support.py",
           "kind": "file"
         },
         {
