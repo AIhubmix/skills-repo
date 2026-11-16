@@ -10,4 +10,4 @@ source:
   repo: https://github.com/anthropics/skills
   path: skills/pptx
   ref: main
-  syncedCommit: 1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064
+  syncedCommit: e4bb5d960d87126ff3b3a8af1a104b7db67560ba
