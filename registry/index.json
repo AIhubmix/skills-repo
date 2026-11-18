@@ -1,6 +1,6 @@
 {
   "specVersion": 2,
-  "generatedAt": "2026-11-16T20:12:00.430Z",
+  "generatedAt": "2026-11-18T20:12:07.449Z",
   "skills": [
     {
       "specVersion": 2,
@@ -338,10 +338,10 @@
         "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
         "path": ".claude/skills/ui-ux-pro-max",
         "ref": "main",
-        "syncedCommit": "e59ff376a41f7ca47b7541ad5c116495cbade3ee"
+        "syncedCommit": "ed766d3bf62f32c8d27762ad49abdc3a4744c84f"
       },
       "repoPath": "skills/development/ui-ux-pro-max",
-      "summary": "Searchable local UI/UX guidance: 80 searchable styles (51 active), 192 product palettes and exact reasoning profiles, 74 font pairings, 120 UX guidelines, 105 curated icons, 17 GSAP presets, 25 chart types, and 22 technology stacks.",
+      "summary": "Searchable local UI/UX guidance: 80 searchable styles (51 active), 194 product palettes and exact reasoning profiles, 74 font pairings, 130 UX guidelines, 105 curated icons, 17 GSAP presets, 25 chart types, and 22 technology stacks.",
       "files": [
         {
           "path": "data/app-interface.csv",
@@ -617,6 +617,14 @@
         },
         {
           "path": "scripts/tests/test_ime_composition.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_map_guidance.py",
+          "kind": "file"
+        },
+        {
+          "path": "scripts/tests/test_map_product_types.py",
           "kind": "file"
         },
         {
